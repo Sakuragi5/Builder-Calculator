@@ -6,20 +6,23 @@
     <title>Builder Calculator</title>
     <meta name="description" content="Enterprise plan quotation calculator with multi-plan PDF generation.">
     
-    <!-- Favicon: calculator emoji (loaded from emojiapi.dev as PNG) -->
-    <link rel="icon" type="image/png" href="https://emojiapi.dev/api/v1/1F9EE/512.png">
-    <link rel="apple-touch-icon" href="https://emojiapi.dev/api/v1/1F9EE/512.png">
+    <!-- Custom PNG favicon (works on all browsers including iOS Safari) -->
+    <link rel="icon" type="image/png" href="builder-favicon-32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="builder-favicon-64.png" sizes="64x64">
+    <link rel="icon" type="image/png" href="builder-favicon-192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="builder-favicon-180.png">
+    <link rel="shortcut icon" href="builder-favicon.ico">
     
     <!-- Open Graph (link previews in WhatsApp, Telegram, iMessage, etc.) -->
     <meta property="og:title" content="Builder Calculator">
     <meta property="og:description" content="Enterprise plan quotation calculator with multi-plan PDF generation.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Builder Calculator">
-    <meta property="og:image" content="https://emojiapi.dev/api/v1/1F9EE/512.png">
+    <meta property="og:image" content="builder-favicon-512.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Builder Calculator">
     <meta name="twitter:description" content="Enterprise plan quotation calculator.">
-    <meta name="twitter:image" content="https://emojiapi.dev/api/v1/1F9EE/512.png">
+    <meta name="twitter:image" content="builder-favicon-512.png">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
