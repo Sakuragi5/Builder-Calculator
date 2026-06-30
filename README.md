@@ -6,14 +6,20 @@
     <title>Builder Calculator</title>
     <meta name="description" content="Enterprise plan quotation calculator with multi-plan PDF generation.">
     
+    <!-- Favicon: calculator emoji (loaded from emojiapi.dev as PNG) -->
+    <link rel="icon" type="image/png" href="https://emojiapi.dev/api/v1/1F9EE/512.png">
+    <link rel="apple-touch-icon" href="https://emojiapi.dev/api/v1/1F9EE/512.png">
+    
     <!-- Open Graph (link previews in WhatsApp, Telegram, iMessage, etc.) -->
     <meta property="og:title" content="Builder Calculator">
     <meta property="og:description" content="Enterprise plan quotation calculator with multi-plan PDF generation.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Builder Calculator">
+    <meta property="og:image" content="https://emojiapi.dev/api/v1/1F9EE/512.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Builder Calculator">
     <meta name="twitter:description" content="Enterprise plan quotation calculator.">
+    <meta name="twitter:image" content="https://emojiapi.dev/api/v1/1F9EE/512.png">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,7 +39,6 @@
             top: 0;
             left: 0;
         }
-        /* Loading screen shown while iframe loads */
         #loader {
             position: fixed;
             top: 0; left: 0;
@@ -47,10 +52,7 @@
             z-index: 9999;
             transition: opacity 0.4s ease;
         }
-        #loader.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
+        #loader.hidden { opacity: 0; pointer-events: none; }
         .spinner {
             width: 48px;
             height: 48px;
@@ -65,35 +67,24 @@
             font-weight: 600;
             letter-spacing: 0.5px;
         }
-        #loader-subtext {
-            color: #888;
-            font-size: 11px;
-            margin-top: 4px;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
+        #loader-subtext { color: #888; font-size: 11px; margin-top: 4px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
-    <!-- Loading screen -->
     <div id="loader">
         <div class="spinner"></div>
         <div id="loader-text">Loading Builder Calculator...</div>
         <div id="loader-subtext">Enterprise Plan Quotation Builder</div>
     </div>
-    
-    <!-- Full-screen iframe with your Apps Script app -->
-    <!-- ⚠️ REPLACE THE URL BELOW WITH YOUR ACTUAL BUILDER CALCULATOR URL -->
     <iframe 
-        src="https://script.google.com/macros/s/AKfycbyUwItdCp8-LaVk1Yr47V59vDZbLrXWMciwA9Fcb67zVUTrdNFfkW4uwTDLkfFXMRi9/exec" 
+        src="https://script.google.com/macros/s/AKfycbw4GYg5Slp6Ft6XmTXb5EmDz4v8yvjkR01BBvI6CWDrzw0hrSz8sp7bjif_wzSd3vmJeA/exec" 
         id="appFrame"
         allow="geolocation; camera; microphone; fullscreen; clipboard-read; clipboard-write"
         allowfullscreen
         allowusermedia
         onload="hideLoader()">
     </iframe>
-    
     <script>
         function hideLoader() {
             var loader = document.getElementById('loader');
@@ -102,8 +93,6 @@
                 setTimeout(function() { loader.style.display = 'none'; }, 400);
             }
         }
-        
-        // Fallback: hide loader after 10 seconds even if onload doesn't fire
         setTimeout(hideLoader, 10000);
     </script>
 </body>
